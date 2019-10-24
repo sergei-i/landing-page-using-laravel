@@ -11,6 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css');
+
 mix.styles([
         'resources/assets/css/bootstrap.min.css',
         'resources/assets/css/style.css',
@@ -30,7 +33,9 @@ mix.scripts([
     'resources/assets/js/jquery.easing.1.3.js',
     'resources/assets/js/jquery.isotope.js',
     'resources/assets/js/wow.js',
-    'resources/assets/js/custom.js'
+    'resources/assets/js/custom.js',
+    'resources/assets/js/ckeditor.js',
+    'resources/assets/js/bootstrap-filestyle.min.js',
 ], 'public/assets/js/main.js');
 
 mix.copy('resources/assets/fonts', 'public/assets/fonts');
