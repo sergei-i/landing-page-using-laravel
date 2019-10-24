@@ -32,7 +32,7 @@ class IndexController extends Controller
             Mail::to($data['email'])->send(new ContactUsEmail($data));
 
             if ($request) {
-                return redirect()->route('home')->with('status', 'Email отправлен!');
+                return redirect()->route('main')->with('status', 'Email отправлен!');
             }
         }
 

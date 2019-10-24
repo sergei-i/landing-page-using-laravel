@@ -4,7 +4,7 @@
     @foreach($pages as $k => $page)
 
         @if($k%2 == 0)
-            <section id="home" class="top_cont_outer">
+            <section id="{{ $page->alias }}" class="top_cont_outer">
                 <div class="hero_wrapper">
                     <div class="container">
                         <div class="hero_section">
@@ -32,7 +32,7 @@
             </section>
             <!--Hero_Section-->
         @else
-            <section id="aboutUs"><!--Aboutus-->
+            <section id="{{ $page->alias }}"><!--Aboutus-->
                 <div class="inner_wrapper">
                     <div class="container">
                         <h2>{{ $page->name }}</h2>
@@ -271,7 +271,7 @@
                 </div>
                 <div class="col-lg-8 wow fadeInLeft delay-06s">
                     <div class="form">
-                        <form action="{{ route('home') }}" method="post">
+                        <form action="{{ route('main') }}" method="post">
                             {{ csrf_field() }}
                             <input class="input-text" type="text" name="name" value="{{ old('name') }}"
                                    onFocus="if(this.value==this.defaultValue)this.value='';"
