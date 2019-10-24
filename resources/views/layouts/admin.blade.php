@@ -6,9 +6,7 @@
     <title>{{$title}}</title>
     <link rel="icon" href="/assets/favicon.png" type="image/png">
     <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet" type="text/css">
-
-    <script type="text/javascript" src="{{asset('assets/js/main.js')}}"></script>
-
+    <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
 </head>
 <body>
 <header id="header_wrapper">
@@ -34,5 +32,6 @@
 
 @yield('content')
 
+<script type="text/javascript" src="{{ asset('/assets/js/main.js') }}"></script>
 </body>
 </html>

@@ -34,7 +34,6 @@ mix.scripts([
     'resources/assets/js/jquery.isotope.js',
     'resources/assets/js/wow.js',
     'resources/assets/js/custom.js',
-    'resources/assets/js/ckeditor.js',
     'resources/assets/js/bootstrap-filestyle.min.js',
 ], 'public/assets/js/main.js');
 
