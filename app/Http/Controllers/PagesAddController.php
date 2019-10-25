@@ -34,7 +34,7 @@ class PagesAddController extends Controller
             if ($request->hasFile('images')) {
                 $file = $request->file('images');
                 $input['images'] = $file->getClientOriginalName();
-                $file->move(public_path() . '/assets/uploads/', $input['images']);
+                $file->move(public_path() . '/assets/img', $input['images']);
             }
 
             $page = new Page();
